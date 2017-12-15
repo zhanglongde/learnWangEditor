@@ -7,6 +7,7 @@ const config = {
     // 默认菜单配置
     menus: [
         'head',
+        'fontSize',
         'bold',
         'italic',
         'underline',
