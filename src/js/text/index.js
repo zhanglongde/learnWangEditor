@@ -476,6 +476,8 @@ Text.prototype = {
 
         // 为图片增加 selected 样式
         $textElem.on('click', 'img', function (e) {
+            console.log(e.target)
+            e.target.classList.add('clicked')
             const img = this
             const $img = $(img)
 
