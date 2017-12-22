@@ -169,7 +169,7 @@ class ImgTool {
             this.updateSize($(this.ndTarget), this.naturalWidth, this.naturalHeight)
         })
         toolOriginSize.on('click', () => {
-            this.updateSize($(this.ndTarget), this.naturalWidth, this.naturalHeight)
+            this.ndTarget.removeAttribute('style')
         })
         toolRemove.on('click', () => {
             $(this.ndTarget).remove()
