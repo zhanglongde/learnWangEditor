@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>wangEditor 图片拖拽</title>
+</head>
+<body>
+
+    <p>wangEditor 以base64保存图片文件</p>
+    <div id="div4">
+        <p>欢迎使用 wangEditor 富文本编辑器</p>
+    </div>
+
+    <script type="text/javascript" src="../../release/wangEditor.min.js"></script>
+    <script type="text/javascript">
+        var E = window.wangEditor
+        var editor1 = new E('#div4')
+        editor1.customConfig.uploadImgShowBase64 = true
+        editor1.create()
+    </script>
+</body>
+</html>

@@ -5,6 +5,7 @@
 import $ from '../util/dom-core.js'
 import { getPasteText, getPasteHtml, getPasteImgs } from '../util/paste-handle.js'
 import { UA } from '../util/util.js'
+import ImgTool from './ImgTool'
 
 // 获取一个 elem.childNodes 的 JSON 数据
 function getChildrenJSON($elem) {
@@ -476,8 +477,7 @@ Text.prototype = {
 
         // 为图片增加 selected 样式
         $textElem.on('click', 'img', function (e) {
-            console.log(e.target)
-            e.target.classList.add('clicked')
+            // console.log(editor.$textContainerElem)
             const img = this
             const $img = $(img)
 
@@ -488,6 +488,10 @@ Text.prototype = {
 
             // 记录当前点击过的图片
             editor._selectedImg = $img
+            editor._clickedImg = img
+
+            let imgTool = new ImgTool(editor)
+            imgTool.show()
 
             // 修改选区并 restore ，防止用户此时点击退格键，会删除其他内容
             editor.selection.createRangeByElem($img)

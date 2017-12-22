@@ -19,12 +19,12 @@ Menus.prototype = {
         const editor = this.editor
         const config = editor.config || {}
         const configMenus = config.menus || []  // 获取配置中的菜单
-        console.log(configMenus)
+        // console.log(configMenus)
         // 根据配置信息，创建菜单
         configMenus.forEach(menuKey => {
             const MenuConstructor = MenuConstructors[menuKey]
             if (MenuConstructor && typeof MenuConstructor === 'function') {
-                console.log(menuKey)
+                // console.log(menuKey)
                 // 创建单个菜单
                 this.menus[menuKey] = new MenuConstructor(editor)
             }
