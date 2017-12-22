@@ -54,9 +54,9 @@ class ImgTool {
     }
 
     showCornerRect () {
-        let $bottomRight = $(`<span class="img-mask-corner-rect bottom right"></span>`)
+        this.$bottomRight = $(`<span class="img-mask-corner-rect bottom right"></span>`)
         let startX = 0, startY = 0, flag = false, draggedRectTarget = null
-        $bottomRight.on('mousedown', (event) => {
+        this.$bottomRight.on('mousedown', (event) => {
             draggedRectTarget = event.target
             startX = event.pageX
             startY = event.pageY
