@@ -25,8 +25,8 @@ class ImgTool {
         this.naturalWidth = ndTarget.naturalWidth
         this.naturalHeight = ndTarget.naturalHeight
 
-        this.minWidth =  parseInt(this.naturalWidth * 0.4)
-        this.minHeight =  parseInt(this.naturalHeight * 0.4)
+        this.minWidth =  parseInt(this.naturalWidth * 0.2)
+        this.minHeight =  parseInt(this.naturalHeight * 0.2)
 
         this.$imgDragContainer = $(`<div class="img-drag-container" style="left:${this.positionX}px; top:${this.positionY}px"></div>`)
         this.showImgWrapper()
@@ -45,9 +45,6 @@ class ImgTool {
     showImgWrapper () {
         this.$imgWrapper = $(`<div class="img-wrapper" style="height:${this.currentHeight}px;width:${this.currentWidth}px">
                 <div class="img-mask"></div>
-                <!--<span class="img-mask-corner-rect top left"></span>-->
-                <!--<span class="img-mask-corner-rect top right"></span>-->
-                <!--<span class="img-mask-corner-rect bottom left"></span>-->
             </div>`)
         this.showCornerRect()
         this.$imgDragContainer.append(this.$imgWrapper)
